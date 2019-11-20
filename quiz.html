@@ -1,0 +1,80 @@
+<h1>Quiz on Important Facts</h1>
+<div class="quiz-container">
+  <div id="quiz"></div>
+</div>
+<button id="previous">Previous Question</button>
+<button id="next">Next Question</button>
+<button id="submit">Submit Quiz</button>
+<div id="results"></div>
+
+<style type="text/css">
+	@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+
+body{
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    color: #333;
+  font-weight: 300;
+  text-align: center;
+  background-color: #f8f6f0;
+}
+h1{
+  font-weight: 300;
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #444;
+  color: #fff;
+}
+.question{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.answers {
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+.answers label{
+  display: block;
+  margin-bottom: 10px;
+}
+button{
+  font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    background-color: #279;
+    color: #fff;
+    border: 0px;
+    border-radius: 3px;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+button:hover{
+    background-color: #38a;
+}
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.active-slide{
+  opacity: 1;
+  z-index: 2;
+}
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+}
+
+</style>
+
+<script type="text/javascript">
+	var _0x39c8=['PUBG','Which\x20of\x20the\x20following\x20is\x20not\x20a\x20Telecommunication\x20Service?','Whatsapp','Telegram','WeChat','Microsoft\x20Excel','push','<label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22radio\x22\x20name=\x22question','\x22\x20value=\x22','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','answers','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</label>','<div\x20class=\x22slide\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22question\x22>\x20','question','join','\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','innerHTML','querySelectorAll','.answers','forEach','input[name=question',']:checked','querySelector','style','color','lightgreen','\x20out\x20of\x20','classList','remove','active-slide','add','display','none','inline-block','length','getElementById','quiz','results','submit','previous','next','.slide','addEventListener','click','Who\x20is\x20the\x20founder\x20of\x20Microsoft?','Billie\x20Eilish','Bill\x20Gates','Billy\x20Jeans','Bill\x20Api','WWW\x20stands\x20for:','Wet\x20World\x20Wild','World\x20War\x20W','HTML\x20stands\x20for?','Hypertext\x20Markup\x20Language','Hypervisor\x20Text\x20Makeup\x20Language','Which\x20of\x20the\x20following\x20is\x20not\x20an\x20audio\x20file?','MP3','FLAC','JPG','Which\x20of\x20the\x20following\x20is\x20a\x20video\x20file?','PNG','GIF','Keputusan\x20Kelayakan\x20Piala\x20Dunia\x20Malaysia\x20vs\x20Indonesia\x20pada\x2019/11/2019','Malaysia\x201\x20:\x201\x20Indonesia','Malaysia\x205\x20:\x200\x20Indonesia','Malaysia\x200\x20:\x202\x20Indonesia','RAM\x20stands\x20for','Rotation\x20Acceleration\x20Multitask','Random\x20Access\x20Memory','Reserve\x20Access\x20Malware','Founder\x20of\x20Apple','Steve\x20Aoki','Steve\x20No\x20Jobs','Steve\x20Irwin','Mobile\x20Legends','CSGO'];(function(_0x221dae,_0x585927){var _0x331232=function(_0x331440){while(--_0x331440){_0x221dae['push'](_0x221dae['shift']());}};_0x331232(++_0x585927);}(_0x39c8,0x1f4));var _0x1a91=function(_0x18eeca,_0x3cdb53){_0x18eeca=_0x18eeca-0x0;var _0x39834b=_0x39c8[_0x18eeca];return _0x39834b;};(function(){const _0x1381b6=[{'question':_0x1a91('0x0'),'answers':{'a':_0x1a91('0x1'),'b':_0x1a91('0x2'),'c':_0x1a91('0x3'),'d':_0x1a91('0x4')},'correctAnswer':'b'},{'question':_0x1a91('0x5'),'answers':{'a':_0x1a91('0x6'),'b':'World\x20Wide\x20Web','c':'Western\x20Web\x20World','d':_0x1a91('0x7')},'correctAnswer':'b'},{'question':_0x1a91('0x8'),'answers':{'a':_0x1a91('0x9'),'b':'Hyperbola\x20Text\x20Markup\x20Language','c':_0x1a91('0xa'),'d':'Hypertext\x20Text\x20Markert\x20Language'},'correctAnswer':'a'},{'question':_0x1a91('0xb'),'answers':{'a':_0x1a91('0xc'),'b':'WAV','c':_0x1a91('0xd'),'d':_0x1a91('0xe')},'correctAnswer':'d'},{'question':_0x1a91('0xf'),'answers':{'a':'MP4','b':_0x1a91('0x10'),'c':_0x1a91('0xe'),'d':_0x1a91('0x11')},'correctAnswer':'a'},{'question':_0x1a91('0x12'),'answers':{'a':_0x1a91('0x13'),'b':_0x1a91('0x14'),'c':'Malaysia\x202\x20:\x200\x20Indonesia','d':_0x1a91('0x15')},'correctAnswer':'c'},{'question':_0x1a91('0x16'),'answers':{'a':_0x1a91('0x17'),'b':_0x1a91('0x18'),'c':'Ransomware\x20Antivirus\x20Machine','d':_0x1a91('0x19')},'correctAnswer':'b'},{'question':_0x1a91('0x1a'),'answers':{'a':'Steve\x20Jobs','b':_0x1a91('0x1b'),'c':_0x1a91('0x1c'),'d':_0x1a91('0x1d')},'correctAnswer':'a'},{'question':'Which\x20of\x20the\x20following\x20is\x20not\x20a\x20First\x20Person\x20Shooter\x20Game?','answers':{'a':_0x1a91('0x1e'),'b':_0x1a91('0x1f'),'c':'COD','d':_0x1a91('0x20')},'correctAnswer':'a'},{'question':_0x1a91('0x21'),'answers':{'a':_0x1a91('0x22'),'b':_0x1a91('0x23'),'c':_0x1a91('0x24'),'d':_0x1a91('0x25')},'correctAnswer':'d'}];function _0x46214d(){const _0x578dc9=[];_0x1381b6['forEach']((_0x41c33b,_0x36fb2f)=>{const _0x28c180=[];for(letter in _0x41c33b['answers']){_0x28c180[_0x1a91('0x26')](_0x1a91('0x27')+_0x36fb2f+_0x1a91('0x28')+letter+_0x1a91('0x29')+letter+'\x20:\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20'+_0x41c33b[_0x1a91('0x2a')][letter]+_0x1a91('0x2b'));}_0x578dc9[_0x1a91('0x26')](_0x1a91('0x2c')+_0x41c33b[_0x1a91('0x2d')]+'\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22answers\x22>\x20'+_0x28c180[_0x1a91('0x2e')]('')+_0x1a91('0x2f'));});_0x475b8b[_0x1a91('0x30')]=_0x578dc9[_0x1a91('0x2e')]('');}function _0x4f7b17(){const _0x478440=_0x475b8b[_0x1a91('0x31')](_0x1a91('0x32'));let _0x528c3e=0x0;_0x1381b6[_0x1a91('0x33')]((_0x2d264e,_0x401674)=>{const _0x389bdd=_0x478440[_0x401674];const _0x41f82a=_0x1a91('0x34')+_0x401674+_0x1a91('0x35');const _0x51dc7e=(_0x389bdd[_0x1a91('0x36')](_0x41f82a)||{})['value'];if(_0x51dc7e===_0x2d264e['correctAnswer']){_0x528c3e++;_0x478440[_0x401674][_0x1a91('0x37')][_0x1a91('0x38')]=_0x1a91('0x39');}else{_0x478440[_0x401674][_0x1a91('0x37')][_0x1a91('0x38')]='red';}});_0x28f3c0['innerHTML']=_0x528c3e+_0x1a91('0x3a')+_0x1381b6['length'];}function _0x265f20(_0x4a90f9){_0x50d84e[_0x29e149][_0x1a91('0x3b')][_0x1a91('0x3c')](_0x1a91('0x3d'));_0x50d84e[_0x4a90f9]['classList'][_0x1a91('0x3e')](_0x1a91('0x3d'));_0x29e149=_0x4a90f9;if(_0x29e149===0x0){_0x7495a6['style'][_0x1a91('0x3f')]=_0x1a91('0x40');}else{_0x7495a6['style']['display']=_0x1a91('0x41');}if(_0x29e149===_0x50d84e[_0x1a91('0x42')]-0x1){_0x3f8f96[_0x1a91('0x37')][_0x1a91('0x3f')]=_0x1a91('0x40');_0x1f9685[_0x1a91('0x37')][_0x1a91('0x3f')]=_0x1a91('0x41');}else{_0x3f8f96[_0x1a91('0x37')][_0x1a91('0x3f')]=_0x1a91('0x41');_0x1f9685[_0x1a91('0x37')][_0x1a91('0x3f')]='none';}}function _0x41e5fd(){_0x265f20(_0x29e149+0x1);}function _0x78d192(){_0x265f20(_0x29e149-0x1);}const _0x475b8b=document[_0x1a91('0x43')](_0x1a91('0x44'));const _0x28f3c0=document[_0x1a91('0x43')](_0x1a91('0x45'));const _0x1f9685=document[_0x1a91('0x43')](_0x1a91('0x46'));_0x46214d();const _0x7495a6=document['getElementById'](_0x1a91('0x47'));const _0x3f8f96=document[_0x1a91('0x43')](_0x1a91('0x48'));const _0x50d84e=document[_0x1a91('0x31')](_0x1a91('0x49'));let _0x29e149=0x0;_0x265f20(0x0);_0x1f9685[_0x1a91('0x4a')]('click',_0x4f7b17);_0x7495a6[_0x1a91('0x4a')](_0x1a91('0x4b'),_0x78d192);_0x3f8f96[_0x1a91('0x4a')]('click',_0x41e5fd);}());
+</script>
